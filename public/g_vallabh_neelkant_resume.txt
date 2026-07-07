@@ -1,0 +1,53 @@
+G VALLABH NEELKANT
+Software QA Engineer | Frontend Developer | Computer Science Engineer
+Email: vallabhneelkant97@gmail.com | Phone: +91-9703052003
+Hyderabad, Telangana, India
+
+SUMMARY:
+Passionate Computer Science Engineer with experience in Software Testing, Quality Assurance, Frontend Development, and building reliable web applications. Skilled in Manual Testing, Automation fundamentals, React.js, API Testing, and modern software development practices.
+
+TECHNICAL SKILLS:
+- Programming: Python, JavaScript
+- Frontend: HTML5, CSS3, React.js
+- Testing: Manual Testing, Functional Testing, Regression Testing, UI Testing, Smoke Testing, Cross Browser Testing, Test Case Design, Bug Reporting
+- Automation & QA Tools: Selenium Basics, Playwright, Postman API Testing, Jira, Browser Developer Tools
+- Databases: SQL, Oracle SQL, CRUD Operations, Joins, Subqueries
+- Tools: GitHub, VS Code, Google Colab
+
+EXPERIENCE:
+AI Axiss | Frontend Developer & QA Tester Intern
+Project: StudentAlumni.AI Platform
+- Developed responsive UI components using React.js, JavaScript, HTML, and CSS.
+- Converted Figma designs into functional web interfaces.
+- Integrated chatbot modules improving user experience.
+- Tested Student, Mentor, Alumni, College, and Admin modules.
+- Created test scenarios and executed test cases.
+- Performed Functional Testing, UI Testing, Regression Testing, and Cross Browser Testing.
+- Reported and tracked defects using testing principles.
+- Worked with developers in a collaborative Agile environment.
+
+EDUCATION:
+B.Tech in Computer Science Engineering (2022 - 2026)
+SR International Institute of Technology, Hyderabad
+CGPA: 6.5/10
+
+Intermediate MPC (2020 - 2022)
+Sri Chaitanya Junior College | Grade: 81%
+
+CBSE Class X (2020)
+Sapphire International School | Grade: 78%
+
+PROJECTS:
+1. Improving Digital Forensic Security: Secure Storage Model using Authentication and Encryption
+   - Secure cloud-based forensic storage system using blockchain and AES/RSA encryption.
+   - Built secure evidence verification to maintain chain of custody.
+
+2. DL-IDS: Deep Learning Based Intrusion Detection System for IoT Security
+   - Cybersecurity application utilizing ML/DL models for real-time intrusion detection.
+   - Designed interactive monitoring dashboard to detect DoS, Probe, U2R, R2L attacks.
+
+CERTIFICATIONS:
+- Manual Testing Certification - Great Learning Academy
+- Generative AI Concepts - Google / Coursera
+- Cloud Computing Certification - Acmegrade
+- Artificial Intelligence Hackathon
