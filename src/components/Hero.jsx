@@ -62,8 +62,8 @@ const Hero = () => {
       className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden dark:bg-dark-bg light:bg-light-bg transition-colors duration-300"
     >
       {/* Background gradients */}
-      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-primary/10 blur-[80px] pointer-events-none -z-10" />
-      <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[400px] h-[400px] rounded-full bg-secondary/15 blur-[100px] pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-primary/5 blur-[100px] pointer-events-none -z-10" />
+      <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[400px] h-[400px] rounded-full bg-secondary/5 blur-[120px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full z-10">
         
@@ -146,47 +146,80 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Right Column: Code Mockup & Profile Pic */}
+        {/* Right Column: Sleek QA Terminal Dashboard */}
         <motion.div 
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="lg:col-span-5 flex flex-col items-center justify-center"
+          className="lg:col-span-5 w-full max-w-md mx-auto"
         >
-          {/* Avatar and Glowing Borders Container */}
-          <div className="relative group w-64 h-64 sm:w-80 sm:h-80 mb-6 flex items-center justify-center">
-            {/* Glowing borders */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary to-secondary blur-lg opacity-40 group-hover:opacity-75 transition-all duration-500 scale-105" />
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary to-secondary p-1">
-              <div className="w-full h-full rounded-full dark:bg-dark-bg light:bg-light-bg overflow-hidden relative">
-                <img 
-                  src="/avatar.png" 
-                  alt="G Vallabh Neelkant Profile Avatar" 
-                  className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-500"
-                />
+          <div className="glass-panel rounded-2xl overflow-hidden shadow-glass-dark border border-white/5 font-mono text-xs sm:text-sm">
+            {/* Terminal Header */}
+            <div className="bg-[#070e1b] px-4 py-3 border-b border-white/5 flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <Terminal size={14} className="text-primary" />
+                <span className="text-xs text-gray-400 font-sans font-semibold">neelkant-qa-suite.sh</span>
               </div>
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+              </span>
             </div>
-          </div>
 
-          {/* IDE Console Mini Mockup */}
-          <div className="w-full max-w-sm glass-panel rounded-xl overflow-hidden shadow-glass-dark border border-white/5 font-mono text-xs">
-            <div className="bg-[#070e1b] px-4 py-2 border-b border-white/5 flex items-center justify-between">
-              <div className="flex items-center space-x-1.5">
-                <Terminal size={12} className="text-primary-light" />
-                <span className="text-[10px] text-gray-400 font-sans">qa_matrix.js</span>
+            {/* Terminal Content */}
+            <div className="p-5 space-y-4 text-gray-400">
+              <div className="space-y-1">
+                <p className="text-primary font-semibold">$ run-test-pipeline --env=prod</p>
+                <p className="text-xs text-gray-500 font-sans">Executing automated testing suite...</p>
               </div>
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 active-dot"></span>
-            </div>
-            <div className="p-4 space-y-1.5 text-gray-400 leading-relaxed">
-              <p><span className="text-secondary-light">const</span> engineer = &#123;</p>
-              <p className="pl-4">name: <span className="text-emerald-400">'G Vallabh Neelkant'</span>,</p>
-              <p className="pl-4">role: <span className="text-emerald-400">'QA & Frontend Dev'</span>,</p>
-              <p className="pl-4">stack: [<span className="text-cyan-400">'React.js'</span>, <span className="text-cyan-400">'JS'</span>, <span className="text-cyan-400">'Testing'</span>],</p>
-              <p className="pl-4">coverage: <span className="text-amber-400">'100%'</span>,</p>
-              <p className="pl-4">bugsFound: <span className="text-secondary-light">function</span>() &#123;</p>
-              <p className="pl-8 text-emerald-400">return 'Defect fixed!';</p>
-              <p className="pl-4">&#125;</p>
-              <p>&#125;;</p>
+
+              <div className="space-y-2 border-l border-white/5 pl-3 py-1 text-xs">
+                <p className="flex items-center space-x-2">
+                  <span className="text-accent font-bold">✔</span>
+                  <span>Smoke Verification ... <span className="text-accent font-bold font-sans">PASSED</span></span>
+                </p>
+                <p className="flex items-center space-x-2">
+                  <span className="text-accent font-bold">✔</span>
+                  <span>UI Functional Validation ... <span className="text-accent font-bold font-sans">PASSED</span></span>
+                </p>
+                <p className="flex items-center space-x-2">
+                  <span className="text-accent font-bold">✔</span>
+                  <span>API Integration Coverage ... <span className="text-accent font-bold font-sans">100%</span></span>
+                </p>
+                <p className="flex items-center space-x-2">
+                  <span className="text-accent font-bold">✔</span>
+                  <span>Cross-Browser Testing ... <span className="text-accent font-bold font-sans">PASSED</span></span>
+                </p>
+                <p className="flex items-center space-x-2">
+                  <span className="text-accent font-bold">✔</span>
+                  <span>Regression Check (No regressions) ... <span className="text-accent font-bold font-sans">OK</span></span>
+                </p>
+              </div>
+
+              {/* Graphical summary */}
+              <div className="bg-[#040810]/60 p-4 rounded-xl border border-white/5 flex items-center justify-between">
+                <div>
+                  <h4 className="text-[10px] text-gray-500 font-bold uppercase tracking-wider font-sans">Pipeline Metrics</h4>
+                  <p className="text-lg font-bold dark:text-white light:text-slate-800 mt-1 font-sans">Zero Defects</p>
+                  <p className="text-[10px] text-accent font-semibold mt-0.5">Ready for Production</p>
+                </div>
+                <div className="relative flex items-center justify-center w-14 h-14">
+                  {/* Circular progress bar SVG */}
+                  <svg className="w-full h-full transform -rotate-90">
+                    <circle cx="28" cy="28" r="24" className="stroke-slate-800" strokeWidth="4" fill="transparent" />
+                    <circle cx="28" cy="28" r="24" className="stroke-accent" strokeWidth="4" fill="transparent" strokeDasharray="150" strokeDashoffset="0" />
+                  </svg>
+                  <span className="absolute text-[10px] font-bold text-accent font-sans">100%</span>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-1.5 text-[10px] text-gray-500 pt-2 border-t border-white/5">
+                <span>Coverage:</span>
+                <span className="text-primary font-semibold">100% Web UI</span>
+                <span>|</span>
+                <span>Active:</span>
+                <span className="text-secondary font-semibold">React, Postman, Playwright</span>
+              </div>
             </div>
           </div>
         </motion.div>
